@@ -33,6 +33,7 @@ const seedDB = async () => {
   await Campground.deleteMany({});
   for (let i = 0; i < 50; i++) {
     const camp = new Campground({
+      author: '6853d9cd92df80346bf2c6b6',
       location: `${sample(cities).city}, ${sample(cities).state}`,
       title: `${sample(descriptors)} ${sample(places)}`,
       image: await seedImg(),
